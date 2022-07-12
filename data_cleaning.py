@@ -6,5 +6,9 @@ print(df_netflix.dtypes)
 print(df_netflix.shape)
 
 # identify missing data
-
 print(df_netflix.isnull().sum())
+
+# % of rows missing in each column
+for column in df_netflix.columns:
+    percentage = df_netflix[column].isnull().mean()
+    print(f'{column}: {round(percentage*100, 2)}%')
