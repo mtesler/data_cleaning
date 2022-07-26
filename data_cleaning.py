@@ -23,3 +23,7 @@ df_movie = df_movie.assign(minutes=df_movie['duration'].str.extract(
 # drop all rows with any Null/NaN/NaT value
 df_movie_clean = df_movie.dropna()
 df_movie_clean_number = df_movie_clean['minutes'].astype(str).astype(int)
+
+# create histogram
+plt.hist(df_movie_clean_number)
+plt.show()
