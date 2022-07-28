@@ -31,3 +31,8 @@ plt.hist(df_movie_clean_number)
 plt.xlabel("Movie duration")
 plt.ylabel("Number of movies")
 plt.show()
+
+# create boxplot
+fix, ax = plt.subplots(nrows=1, ncols=1)
+ax = sns.boxenplot(x=df_movie_clean_number)
+plt.show()
