@@ -25,5 +25,8 @@ df_movie_clean = df_movie.dropna()
 df_movie_clean_number = df_movie_clean['minutes'].astype(str).astype(int)
 
 # create histogram
+fig, ax = plt.subplots(figsize=(10, 7))
 plt.hist(df_movie_clean_number)
+plt.xlabel("Movie duration")
+plt.ylabel("Number of movies")
 plt.show()
